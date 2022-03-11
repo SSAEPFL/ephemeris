@@ -18,6 +18,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include<cstdint>
+
 #ifndef ELP2000_h
 #define ELP2000_h
 
@@ -36,7 +38,7 @@ struct ELP2000Coefficient
     int8_t F;
 };
 
-CONST FLOAT LMoonCoefficients[] =
+CONST float LMoonCoefficients[] =
 {
     6288774,
     1274027,
@@ -166,7 +168,7 @@ CONST ELP2000Coefficient LMoonAngleCoefficients[] =
 };
 
 
-CONST FLOAT BMoonCoefficients[] =
+CONST float BMoonCoefficients[] =
 {
     5128122,
      280602,
@@ -296,7 +298,7 @@ CONST ELP2000Coefficient BMoonAngleCoefficients[] =
 };
 
 
-CONST FLOAT RMoonCoefficients[] =
+CONST float RMoonCoefficients[] =
 {
     -4572.237417,
     -1923.307308,

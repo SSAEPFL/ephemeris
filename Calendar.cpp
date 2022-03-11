@@ -26,7 +26,7 @@
 
 #define INT(value) (value >= 0 ? (long)(value) : (long)(value-1))
 
-JulianDay Calendar::julianDayForDate(FLOAT day, int month, int year )
+JulianDay Calendar::julianDayForDate(float day, int month, int year )
 {
     if( month <= 2 )
     {
@@ -61,11 +61,11 @@ JulianDay Calendar::julianDayForDateAndTime(int day,   int month, int year,
 }
 
 
-void Calendar::dateForJulianDay(JulianDay julianDay, FLOAT *day, int *month, int *year )
+void Calendar::dateForJulianDay(JulianDay julianDay, float *day, int *month, int *year )
 {
     long Z  = julianDay.day;
     
-    FLOAT F = julianDay.time + 0.5;
+    float F = julianDay.time + 0.5;
     
     // Adjust day and time if needed
     if( F >= 1 )
@@ -116,7 +116,7 @@ void Calendar::dateAndTimeForJulianDay(JulianDay julianDay, int *day, int *month
                                        int *hours, int *minutes, int *seconds)
 {
     // Calculate date with float value for day.
-    FLOAT floatingDay;
+    float floatingDay;
     Calendar::dateForJulianDay(julianDay, &floatingDay, month, year);
     
     // Store int value for day

@@ -21,9 +21,9 @@
 #ifndef Calendar_h
 #define Calendar_h
 
-#ifndef FLOAT
-// Change FLOAT according to wanted precision (float or double).
-#define FLOAT float
+#ifndef float
+// Change float according to wanted precision (float or double).
+#define float float
 #endif
 
 
@@ -35,7 +35,7 @@ struct JulianDay
     long day;
     
     /*! Floating value of Jullian day (0.0=0h 1.0=24h) */
-    FLOAT time;
+    float time;
 };
 
 
@@ -46,12 +46,12 @@ class Calendar
 {
 public:
     
-    static JulianDay julianDayForDate(FLOAT day, int month, int year);
+    static JulianDay julianDayForDate(float day, int month, int year);
     
     static JulianDay julianDayForDateAndTime(int day,   int month,   int year,
                                              int hours, int minutes, int seconds);
     
-    static void dateForJulianDay(JulianDay julianDay, FLOAT *day, int *month, int *year);
+    static void dateForJulianDay(JulianDay julianDay, float *day, int *month, int *year);
     
     static void dateAndTimeForJulianDay(JulianDay julianDay,
                                         int *day,   int *month,   int *year,
